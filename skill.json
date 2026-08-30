@@ -1,0 +1,38 @@
+{
+  "name": "genpark-cross-encoder-reranker-document-store-engine-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Cross-encoder reranker document store engine boosting top-k precision in dense neural retrieval pipelines.",
+  "author": "genpark",
+  "category": "reranker",
+  "tags": [
+    "haystack",
+    "cross-encoder",
+    "reranking-engine",
+    "mrr-optimization",
+    "dense-retrieval"
+  ],
+  "inputs": {
+    "user_query": {
+      "type": "string"
+    },
+    "retrieved_docs_count": {
+      "type": "integer"
+    },
+    "top_k_filtered": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "reranking_job_id": {
+      "type": "string"
+    },
+    "mean_reciprocal_rank_mrr": {
+      "type": "number"
+    },
+    "top_scoring_passage_id": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
